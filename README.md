@@ -1,4 +1,3 @@
-Trip Planning Agent Documentation
 ![image](https://github.com/user-attachments/assets/efeff132-288c-48ec-b8cb-66e793d45551)
 *Fig.1: Events tracing for a sample prompt*
 ![image](https://github.com/user-attachments/assets/3d8ff68c-c1ca-4021-91d4-490c2c040579)
