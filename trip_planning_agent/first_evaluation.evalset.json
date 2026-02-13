@@ -1,0 +1,286 @@
+{
+  "eval_set_id": "first_evaluation",
+  "name": "first_evaluation",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "caseed709a",
+      "conversation": [
+        {
+          "invocation_id": "e-15f90cb1-6a8a-4bef-a2c1-b73f4669722b",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Plan a trip to Paris with a budget of 60000 INR per person. It will be the a group of 7 friends including me. The origin city for travel is mumbai.\n\n"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Okay, the flight prices are still high. The cheapest flight in August is with Emirates (EK), costing 383.43 EUR per person.\n\nLet's try searching for flights 3 months out.\n\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-c5de819f-f95f-4dbb-941d-2951b6e24975",
+                "args": {
+                  "timeZone": "Asia/Kolkata"
+                },
+                "name": "get_current_time"
+              },
+              {
+                "id": "adk-5212d4c7-4e1f-455f-85c8-61a829a57a54",
+                "args": {
+                  "query": "Paris travel tips and attractions",
+                  "type": "search"
+                },
+                "name": "serper_search"
+              },
+              {
+                "id": "adk-d6c13834-9c5b-4394-b28e-654120ac0f78",
+                "args": {
+                  "city": "Paris"
+                },
+                "name": "get_weather"
+              },
+              {
+                "id": "adk-5328a16b-3196-4a0d-9d40-c8c1809752bc",
+                "args": {
+                  "query": "average weather in Paris in July",
+                  "type": "search"
+                },
+                "name": "serper_search"
+              },
+              {
+                "id": "adk-d0624abf-61ad-4ac2-922e-7f02dceb67d7",
+                "args": {
+                  "category": "travel",
+                  "maxItems": 5,
+                  "sourceLocation": "France",
+                  "concept": "Paris travel"
+                },
+                "name": "get_news"
+              },
+              {
+                "id": "adk-7abc7e91-08a3-426d-8b4b-78b716160a5c",
+                "args": {
+                  "from_currency": "INR",
+                  "to_currency": "EUR"
+                },
+                "name": "get_currency_rate"
+              },
+              {
+                "id": "adk-861d8daf-a79d-4056-85c3-deb472476f95",
+                "args": {
+                  "max": 5,
+                  "adults": 7,
+                  "destination": "CDG",
+                  "origin": "BOM",
+                  "departure_date": "2025-07-15",
+                  "children": 0
+                },
+                "name": "get_flight_pricing"
+              },
+              {
+                "id": "adk-7cd6da84-740f-456c-aa9a-245680645360",
+                "args": {
+                  "adults": 7,
+                  "children": 0,
+                  "destination": "CDG",
+                  "departure_date": "2025-08-15",
+                  "origin": "BOM",
+                  "max": 5
+                },
+                "name": "get_flight_pricing"
+              },
+              {
+                "id": "adk-2e77a785-76a1-450e-b842-5d40451d7428",
+                "args": {
+                  "origin": "BOM",
+                  "departure_date": "2025-09-15",
+                  "max": 5,
+                  "adults": 7,
+                  "children": 0,
+                  "destination": "CDG"
+                },
+                "name": "get_flight_pricing"
+              }
+            ],
+            "intermediate_responses": [
+              [
+                "travel_planner_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Okay, I can help you plan a trip to Paris for 7 people with a budget of 60000 INR per person. Here's the plan:\n\n**1. Destination Analysis:**\n\n*   I will use `serper_search` to research popular attractions, travel tips, and current events in Paris.\n*   I will use `get_weather` to determine the best time to visit Paris based on weather conditions.\n\n**2. Detailed Itinerary:**\n\n*   I will create a day-wise itinerary including specific times and must-visit places based on my research.\n\n**3. Accurate Budget Breakdown:**\n\n*   I will use `get_flight_pricing` to get flight cost estimates from Mumbai to Paris.\n*   I will use `get_currency_rate` to convert INR to EUR for local expenses.\n*   I will research accommodation costs, local transportation, food, and activities to provide a detailed budget breakdown.\n\nLet's start by getting the current time to plan future dates.\n\n"
+                  }
+                ]
+              ],
+              [
+                "travel_planner_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Okay, the current date is June 15, 2025. I will plan the trip for the next month, starting July 15, 2025.\n\nNow, let's research Paris.\n\n"
+                  }
+                ]
+              ],
+              [
+                "travel_planner_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Okay, I have the search results for Paris travel tips and attractions. Here are some popular attractions:\n\n*   Eiffel Tower\n*   Louvre Museum\n*   Notre-Dame Cathedral\n*   Montmartre\n*   Seine River Cruise\n*   Musée d'Orsay\n\nSome travel tips include booking attractions in advance, embracing cycling, and learning some basic French phrases.\n\nNow, let's check the weather in Paris for July.\n\n"
+                  }
+                ]
+              ],
+              [
+                "travel_planner_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Okay, the current temperature in Paris is 294.97K, which is approximately 22°C. The humidity is 47%. It seems like a pleasant weather. Let's get more specific information about the weather in July.\n\n"
+                  }
+                ]
+              ],
+              [
+                "travel_planner_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Okay, the average high temperature in Paris in July is around 25°C (77°F), and the average low is around 15°C (59°F). It's generally warm and sunny, making it a good time to visit.\n\nNow, let's check for any travel advisories or current events that might affect the trip.\n\n"
+                  }
+                ]
+              ],
+              [
+                "travel_planner_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Okay, I have the news articles related to Paris travel. Some articles discuss travel bans, EU plans for Ukrainian refugees, and driving routes in France. None of these seem to pose an immediate threat or advisory against traveling to Paris. However, it's always good to stay updated on current events before traveling.\n\nNow that I have gathered the necessary information, I can create a detailed itinerary and budget breakdown for your trip to Paris.\n\n**Detailed Itinerary (7 Days/6 Nights):**\n\n**Day 1 (July 15): Arrival in Paris & Eiffel Tower**\n\n*   9:00 AM: Arrive at Charles de Gaulle Airport (CDG) from Mumbai (afternoon flight).\n*   10:00 AM: Take the RER B train to Gare du Nord (approx. 30 minutes).\n*   11:00 AM: Check in to your accommodation near Gare du Nord.\n*   1:00 PM: Lunch at a local bistro.\n*   3:00 PM: Visit the Eiffel Tower. Pre-book tickets online to avoid long queues. Go to the top for panoramic views of Paris.\n*   7:00 PM: Dinner near the Eiffel Tower.\n*   9:00 PM: Enjoy the illuminated Eiffel Tower at night.\n\n**Day 2 (July 16): Louvre Museum & Seine River Cruise**\n\n*   9:00 AM: Visit the Louvre Museum. Pre-book tickets and plan your visit to see key artworks like the Mona Lisa and Venus de Milo.\n*   1:00 PM: Lunch near the Louvre.\n*   3:00 PM: Take a relaxing Seine River cruise.\n*   6:00 PM: Dinner in the Latin Quarter.\n*   8:00 PM: Explore the Latin Quarter's lively streets and enjoy the atmosphere.\n\n**Day 3 (July 17): Montmartre & Sacré-Cœur Basilica**\n\n*   10:00 AM: Visit Montmartre, the artists' district.\n*   11:00 AM: Explore Place du Tertre, where artists create and sell their work.\n*   1:00 PM: Lunch in Montmartre.\n*   2:00 PM: Visit the Sacré-Cœur Basilica for stunning views of Paris.\n*   4:00 PM: Explore the charming streets of Montmartre.\n*   7:00 PM: Dinner in Montmartre.\n*   9:00 PM: Enjoy a cabaret show at the Moulin Rouge (optional).\n\n**Day 4 (July 18): Notre-Dame & Sainte-Chapelle**\n\n*   10:00 AM: Visit Notre-Dame Cathedral (exterior view due to ongoing restoration).\n*   11:00 AM: Explore the Île de la Cité.\n*   12:00 PM: Visit Sainte-Chapelle, known for its stunning stained glass windows.\n*   1:00 PM: Lunch near Notre-Dame.\n*   3:00 PM: Visit the Conciergerie.\n*   6:00 PM: Dinner in the Marais district.\n*   8:00 PM: Explore the Marais district, known for its historical architecture and vibrant atmosphere.\n\n**Day 5 (July 19): Musée d'Orsay & Champs-Élysées**\n\n*   10:00 AM: Visit the Musée d'Orsay, housed in a former railway station, to see Impressionist and Post-Impressionist art.\n*   1:00 PM: Lunch near the Musée d'Orsay.\n*   3:00 PM: Walk along the Champs-Élysées, the famous avenue.\n*   4:00 PM: Visit the Arc de Triomphe.\n*   6:00 PM: Dinner near the Champs-Élysées.\n*   8:00 PM: Shopping at Champs-Élysées.\n\n**Day 6 (July 20): Day Trip to Versailles**\n\n*   9:00 AM: Take a train to Versailles (approx. 1 hour).\n*   10:00 AM: Visit the Palace of Versailles, the former residence of the French royal family. Explore the palace, gardens, and Marie Antoinette's estate.\n*   1:00 PM: Lunch in Versailles.\n*   4:00 PM: Return to Paris.\n*   7:00 PM: Farewell dinner in Paris.\n\n**Day 7 (July 21): Departure**\n\n*   10:00 AM: Check out from your accommodation.\n*   11:00 AM: Travel to Charles de Gaulle Airport (CDG).\n*   2:00 PM: Depart from Paris to Mumbai.\n\n**Accurate Budget Breakdown:**\n\nFirst, I need the current exchange rate from INR to EUR.\n\n"
+                  }
+                ]
+              ],
+              [
+                "travel_planner_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Okay, 1 INR = 0.01009 EUR.\n\nNow let's find the flight prices.\n\n"
+                  }
+                ]
+              ],
+              [
+                "travel_planner_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "The cheapest flight option is with Royal Jordanian (RJ) with one stop in Amman (AMM), costing 1867.39 EUR per person. The next cheapest option is with Air India (AI) with one stop in Delhi (DEL), costing 2089.64 EUR per person.\n\nLet's calculate the budget based on the cheapest flight option:\n\n*   **Flights (round-trip per person):** 1867.39 EUR\n*   **Flights (total for 7 people):** 1867.39 EUR * 7 = 13071.73 EUR\n*   **Flights (total in INR):** 13071.73 EUR * 89.19 INR/EUR = 1165899.81 INR\n\nNow let's calculate the remaining budget:\n\n*   **Total budget (for 7 people):** 60000 INR/person * 7 = 420000 INR\n*   **Remaining budget for accommodation, transport, food, activities, and miscellaneous expenses:** 420000 INR - 1165899.81 INR = -745899.81 INR\n\nIt seems there is a calculation error. The budget per person is 60000 INR. Let me convert this to EUR to check:\n60000 INR = 60000 * 0.01009 EUR = 605.4 EUR\n\nSo the available budget per person is 605.4 EUR\n\n*   **Flights (round-trip per person):** 1867.39 EUR. This exceeds the total budget.\n\nLet's check other dates to see if there are cheaper flights\n\n"
+                  }
+                ]
+              ]
+            ]
+          },
+          "creation_timestamp": 1750010382.560411
+        }
+      ],
+      "session_input": {
+        "app_name": "trip_planning_agent",
+        "user_id": "user",
+        "state": {
+          "current_document": "",
+          "criticism": ""
+        }
+      },
+      "creation_timestamp": 1750010429.1902645
+    }
+  ],
+  "creation_timestamp": 1750010423.5543146
+}

@@ -174,7 +174,7 @@ refiner_travel_agent_in_loop = Agent(
     - Apply feedback to improve the travel plan structure
     - Maintain format but enhance with real data
 
-    **Critical:** You MUST use tools to address data-related feedback. Output only the improved travel plan or call exit_loop.""",
+    **Critical:** You MUST use tools to address data-related feedback. Output full improved plan (from start to end) or call exit_loop.""",
     description="Refines the travel plan based on critique feedback or calls exit_loop if the plan is complete.",
     tools=[
         exit_loop,
